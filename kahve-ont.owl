@@ -1,0 +1,964 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/vesile.celik/ontologies/2026/4/coffee-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/vesile.celik/ontologies/2026/4/coffee-ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/vesile.celik/ontologies/2026/4/coffee-ontology/"/>
+    <Prefix name="bfo" IRI="http://purl.obolibrary.org/obo/BFO_"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="unit" IRI="http://qudt.org/vocab/unit/"/>
+    <Prefix name="foodon" IRI="http://purl.obolibrary.org/obo/FOODON_"/>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Americano"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArabicaBean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BlackEspressoBeverage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BrewCoffee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BrewingEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BySpecies"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CaffeLatte"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoarseGrind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoffeeBean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoffeeCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoffeeEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoffeeExtract"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ColdBrew"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ColdCoffee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ColdServing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DairyComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Espresso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EspressoBased"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExtraFineGrind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FilterBrewed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FineGrind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FlatWhite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FlavourProfile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Frappe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GreekCoffee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GrindSize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GrindingEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HotServing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceCubes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IcedAmericano"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IcedLatte"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ingredient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LibericaBean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lungo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Macchiato"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MediumGrind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MilkBasedEspressoBeverage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PreRoastingProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PreparationProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoastedCoffee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoastingEquipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoastingProcess"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RobustaBean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensoryAttribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServingCondition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TraditionalBrewed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TurkishCoffee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Water"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOrigin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#madeWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#preparedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#servedAs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usesGrind"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBrewTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEspressoShots"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRoastTemp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSugarLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVolume"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isFiltered"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeographicRegion"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:equivalentClass"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Americano"/>
+        <Class IRI="#BlackEspressoBeverage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Americano"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#madeWith"/>
+            <Class IRI="#Water"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArabicaBean"/>
+        <Class IRI="#BySpecies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BlackEspressoBeverage"/>
+        <Class IRI="#EspressoBased"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BlackEspressoBeverage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#servedAs"/>
+            <Class IRI="#HotServing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BrewCoffee"/>
+        <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BrewCoffee"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#servedAs"/>
+            <Class IRI="#HotServing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BrewingEquipment"/>
+        <Class IRI="#CoffeeEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BySpecies"/>
+        <Class IRI="#CoffeeBean"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaffeLatte"/>
+        <Class IRI="#MilkBasedEspressoBeverage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaffeLatte"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#servedAs"/>
+            <Class IRI="#HotServing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoarseGrind"/>
+        <Class IRI="#GrindSize"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoffeeBean"/>
+        <Class IRI="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoffeeExtract"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ColdBrew"/>
+        <Class IRI="#ColdCoffee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ColdBrew"/>
+        <DataHasValue>
+            <DataProperty IRI="#isFiltered"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ColdCoffee"/>
+        <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ColdCoffee"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#servedAs"/>
+            <Class IRI="#ColdServing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ColdServing"/>
+        <Class IRI="#ServingCondition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DairyComponent"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Espresso"/>
+        <Class IRI="#BlackEspressoBeverage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Espresso"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasVolume"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EspressoBased"/>
+        <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EspressoBased"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasEspressoShots"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExtraFineGrind"/>
+        <Class IRI="#GrindSize"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FilterBrewed"/>
+        <Class IRI="#BrewCoffee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FilterBrewed"/>
+        <DataHasValue>
+            <DataProperty IRI="#isFiltered"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FineGrind"/>
+        <Class IRI="#GrindSize"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlatWhite"/>
+        <Class IRI="#MilkBasedEspressoBeverage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlatWhite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#servedAs"/>
+            <Class IRI="#HotServing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FlavourProfile"/>
+        <Class IRI="#CoffeeCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Frappe"/>
+        <Class IRI="#ColdCoffee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GreekCoffee"/>
+        <Class IRI="#TraditionalBrewed"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GreekCoffee"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#usesGrind"/>
+            <Class IRI="#ExtraFineGrind"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GrindSize"/>
+        <Class IRI="#CoffeeCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GrindingEquipment"/>
+        <Class IRI="#CoffeeEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HotServing"/>
+        <Class IRI="#ServingCondition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceCubes"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IcedAmericano"/>
+        <Class IRI="#ColdCoffee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IcedAmericano"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#madeWith"/>
+            <Class IRI="#IceCubes"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IcedAmericano"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#madeWith"/>
+            <Class IRI="#Water"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IcedAmericano"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasEspressoShots"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IcedLatte"/>
+        <Class IRI="#ColdCoffee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IcedLatte"/>
+        <Class IRI="#MilkBasedEspressoBeverage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IcedLatte"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#madeWith"/>
+            <Class IRI="#IceCubes"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ingredient"/>
+        <Class IRI="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LibericaBean"/>
+        <Class IRI="#BySpecies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lungo"/>
+        <Class IRI="#BlackEspressoBeverage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lungo"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasVolume"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Macchiato"/>
+        <Class IRI="#MilkBasedEspressoBeverage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Macchiato"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#servedAs"/>
+            <Class IRI="#HotServing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MediumGrind"/>
+        <Class IRI="#GrindSize"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilkBasedEspressoBeverage"/>
+        <Class IRI="#EspressoBased"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilkBasedEspressoBeverage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#madeWith"/>
+            <Class IRI="#DairyComponent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PreRoastingProcess"/>
+        <Class IRI="#http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PreparationProcess"/>
+        <Class IRI="#http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoastedCoffee"/>
+        <Class IRI="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoastingEquipment"/>
+        <Class IRI="#CoffeeEquipment"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoastingProcess"/>
+        <Class IRI="#http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoastingProcess"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasRoastTemp"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RobustaBean"/>
+        <Class IRI="#BySpecies"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensoryAttribute"/>
+        <Class IRI="#CoffeeCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServingCondition"/>
+        <Class IRI="#CoffeeCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TraditionalBrewed"/>
+        <Class IRI="#BrewCoffee"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TraditionalBrewed"/>
+        <DataHasValue>
+            <DataProperty IRI="#isFiltered"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TurkishCoffee"/>
+        <Class IRI="#TraditionalBrewed"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TurkishCoffee"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#usesGrind"/>
+            <Class IRI="#ExtraFineGrind"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Water"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#madeWith"/>
+            <Class IRI="#Ingredient"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#preparedBy"/>
+            <Class IRI="#http://purl.obolibrary.org/obo/BFO_0000015"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#preparedBy"/>
+            <Class IRI="#http://purl.obolibrary.org/obo/BFO_0000015"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <!-- Kardinalite: EspressoBased içeceklerde EN AZ 1 shot espresso olmalıdır (Min Cardinality = 1) -->
+    <SubClassOf>
+        <Class IRI="#EspressoBased"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#hasEspressoShots"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataMinCardinality>
+    </SubClassOf>
+
+    <!-- Kardinalite: Demlenmiş bir kahve (BrewCoffee) TAM OLARAK 1 öğütme tipi kullanır (Exact Cardinality = 1) -->
+    <SubClassOf>
+        <Class IRI="#BrewCoffee"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#usesGrind"/>
+            <Class IRI="#GrindSize"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+
+    <!-- Kardinalite: Bir kahve çekirdeğinin (CoffeeBean) TAM OLARAK 1 coğrafi kökeni olmalıdır -->
+    <SubClassOf>
+        <Class IRI="#CoffeeBean"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasOrigin"/>
+            <Class IRI="#GeographicRegion"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EspressoBased"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#hasEspressoShots"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataMinCardinality>
+    </SubClassOf>
+
+    <SubClassOf>
+        <Class IRI="#BrewCoffee"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#usesGrind"/>
+            <Class IRI="#GrindSize"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+
+    <SubClassOf>
+        <Class IRI="#CoffeeBean"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasOrigin"/>
+            <Class IRI="#GeographicRegion"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+
+    <SubClassOf>
+        <Class IRI="#RoastingProcess"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasRoastTemp"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+
+    <SubClassOf>
+        <Class IRI="#MilkBasedEspressoBeverage"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#madeWith"/>
+            <Class IRI="#DairyComponent"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    
+    <DisjointClasses>
+        <Class IRI="#Americano"/>
+        <Class IRI="#Espresso"/>
+        <Class IRI="#Lungo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ArabicaBean"/>
+        <Class IRI="#LibericaBean"/>
+        <Class IRI="#RobustaBean"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BrewCoffee"/>
+        <Class IRI="#EspressoBased"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BrewingEquipment"/>
+        <Class IRI="#GrindingEquipment"/>
+        <Class IRI="#RoastingEquipment"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CoarseGrind"/>
+        <Class IRI="#ExtraFineGrind"/>
+        <Class IRI="#FineGrind"/>
+        <Class IRI="#MediumGrind"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CoffeeBean"/>
+        <Class IRI="#Ingredient"/>
+        <Class IRI="#RoastedCoffee"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CoffeeExtract"/>
+        <Class IRI="#DairyComponent"/>
+        <Class IRI="#Water"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ColdBrew"/>
+        <Class IRI="#Frappe"/>
+        <Class IRI="#IcedAmericano"/>
+        <Class IRI="#IcedLatte"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ColdServing"/>
+        <Class IRI="#HotServing"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#FlavourProfile"/>
+        <Class IRI="#SensoryAttribute"/>
+        <Class IRI="#ServingCondition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PreRoastingProcess"/>
+        <Class IRI="#PreparationProcess"/>
+        <Class IRI="#RoastingProcess"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DairyComponent"/>
+        <Class IRI="#IceCubes"/>
+        <Class IRI="#Water"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DairyComponent"/>
+        <Class IRI="#IceCubes"/>
+        <Class IRI="#Water"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasOrigin"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#madeWith"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#preparedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#servedAs"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#usesGrind"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBrewTime"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasEspressoShots"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRoastTemp"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSugarLevel"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasVolume"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#isFiltered"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/FOODON_00001002</IRI>
+        <Literal>CoffeeProduct</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#http://purl.obolibrary.org/obo/BFO_0000015</IRI>
+        <Literal>ProductionProcess</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#http://purl.obolibrary.org/obo/FOODON_00001244</IRI>
+        <Literal>CoffeeBeverage</Literal>
+    </AnnotationAssertion>
+
+    <!-- Eksik Sınıfların ve Ters Özelliklerin Deklarasyonu -->
+    <Declaration>
+        <ObjectProperty IRI="#isIngredientOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isOriginOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#prepares"/>
+    </Declaration>
+
+    <!-- Ters (Inverse) İlişki Bağlantıları -->
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#madeWith"/>
+        <ObjectProperty IRI="#isIngredientOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasOrigin"/>
+        <ObjectProperty IRI="#isOriginOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#preparedBy"/>
+        <ObjectProperty IRI="#prepares"/>
+    </InverseObjectProperties>
+
+
+    <!-- Object Properties Domain ve Range Ayarları -->
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#madeWith"/>
+        <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#madeWith"/>
+        <Class IRI="#Ingredient"/>
+    </ObjectPropertyRange>
+
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOrigin"/>
+        <Class IRI="#CoffeeBean"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOrigin"/>
+        <Class IRI="#GeographicRegion"/>
+    </ObjectPropertyRange>
+
+    <!-- Eksik Object Property Domain & Range Atamaları -->
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#servedAs"/>
+        <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#servedAs"/>
+        <Class IRI="#ServingCondition"/>
+    </ObjectPropertyRange>
+
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#usesGrind"/>
+        <Class IRI="#BrewCoffee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#usesGrind"/>
+        <Class IRI="#GrindSize"/>
+    </ObjectPropertyRange>
+
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#preparedBy"/>
+        <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#preparedBy"/>
+        <Class IRI="#PreparationProcess"/>
+    </ObjectPropertyRange>
+
+    <!-- Domain & Range Atamaları -->
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBrewTime"/>
+        <Class IRI="#BrewCoffee"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBrewTime"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSugarLevel"/>
+        <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSugarLevel"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasVolume"/>
+        <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasVolume"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+
+    <DataPropertyDomain>
+        <DataProperty IRI="#isFiltered"/>
+        <Class IRI="#BrewCoffee"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#isFiltered"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+
+    <!-- Data Properties Domain ve Range Ayarları -->
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRoastTemp"/>
+        <Class IRI="#RoastingProcess"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRoastTemp"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEspressoShots"/>
+        <Class IRI="#EspressoBased"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEspressoShots"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+
+    <!-- Özellik Karakteristikleri (Functional Properties) -->
+    <FunctionalDataProperty>
+        <DataProperty IRI="#isFiltered"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasVolume"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasBrewTime"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasRoastTemp"/>
+    </FunctionalDataProperty>
+
+    <Declaration>
+        <NamedIndividual IRI="#StandartEkstraInceOgutum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SabahEspressom_Ornek2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#KolombiyaBolgesi"/>
+    </Declaration>
+
+    <ClassAssertion>
+        <Class IRI="#ExtraFineGrind"/>
+        <NamedIndividual IRI="#StandartEkstraInceOgutum"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TurkishCoffee"/>
+        <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Espresso"/>
+        <NamedIndividual IRI="#SabahEspressom_Ornek2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GeographicRegion"/>
+        <NamedIndividual IRI="#KolombiyaBolgesi"/>
+    </ClassAssertion>
+
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#usesGrind"/>
+        <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
+        <NamedIndividual IRI="#StandartEkstraInceOgutum"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSugarLevel"/>
+        <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Medium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isFiltered"/>
+        <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEspressoShots"/>
+        <NamedIndividual IRI="#SabahEspressom_Ornek2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVolume"/>
+        <NamedIndividual IRI="#SabahEspressom_Ornek2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">60.0</Literal>
+    </DataPropertyAssertion>
+
+</Ontology>
+
+
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
