@@ -33,9 +33,9 @@
     <Declaration>
         <Class IRI="#BrewingEquipment"/>
     </Declaration>
-    <Declaration>
+    <!-- <Declaration>
         <Class IRI="#BySpecies"/>
-    </Declaration>
+    </Declaration> -->
     <Declaration>
         <Class IRI="#CaffeLatte"/>
     </Declaration>
@@ -90,8 +90,12 @@
     <Declaration>
         <Class IRI="#Frappe"/>
     </Declaration>
-    <Declaration>
+    <!-- <Declaration>
         <Class IRI="#GreekCoffee"/>
+    </Declaration> -->
+    
+    <Declaration>
+        <Class IRI="#DecoctionBrewedCoffee"/>
     </Declaration>
     <Declaration>
         <Class IRI="#GrindSize"/>
@@ -156,9 +160,9 @@
     <Declaration>
         <Class IRI="#TraditionalBrewed"/>
     </Declaration>
-    <Declaration>
+    <!-- <Declaration>
         <Class IRI="#TurkishCoffee"/>
-    </Declaration>
+    </Declaration> -->
     <Declaration>
         <Class IRI="#Water"/>
     </Declaration>
@@ -218,9 +222,13 @@
             <Class IRI="#Water"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
+    <!-- <SubClassOf>
         <Class IRI="#ArabicaBean"/>
         <Class IRI="#BySpecies"/>
+    </SubClassOf> -->
+    <SubClassOf>
+        <Class IRI="#ArabicaBean"/>
+        <Class IRI="#CoffeeBean"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#BlackEspressoBeverage"/>
@@ -248,10 +256,10 @@
         <Class IRI="#BrewingEquipment"/>
         <Class IRI="#CoffeeEquipment"/>
     </SubClassOf>
-    <SubClassOf>
+    <!-- <SubClassOf>
         <Class IRI="#BySpecies"/>
         <Class IRI="#CoffeeBean"/>
-    </SubClassOf>
+    </SubClassOf> -->
     <SubClassOf>
         <Class IRI="#CaffeLatte"/>
         <Class IRI="#MilkBasedEspressoBeverage"/>
@@ -365,7 +373,7 @@
         <Class IRI="#Frappe"/>
         <Class IRI="#ColdCoffee"/>
     </SubClassOf>
-    <SubClassOf>
+    <!-- <SubClassOf>
         <Class IRI="#GreekCoffee"/>
         <Class IRI="#TraditionalBrewed"/>
     </SubClassOf>
@@ -375,7 +383,7 @@
             <ObjectProperty IRI="#usesGrind"/>
             <Class IRI="#ExtraFineGrind"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
+    </SubClassOf> -->
     <SubClassOf>
         <Class IRI="#GrindSize"/>
         <Class IRI="#CoffeeCharacteristic"/>
@@ -436,9 +444,13 @@
         <Class IRI="#Ingredient"/>
         <Class IRI="http://purl.obolibrary.org/obo/FOODON_00001002"/>
     </SubClassOf>
-    <SubClassOf>
+    <!-- <SubClassOf>
         <Class IRI="#LibericaBean"/>
         <Class IRI="#BySpecies"/>
+    </SubClassOf> -->
+    <SubClassOf>
+        <Class IRI="#LibericaBean"/>
+        <Class IRI="#CoffeeBean"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lungo"/>
@@ -504,9 +516,13 @@
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
+    <!-- <SubClassOf>
         <Class IRI="#RobustaBean"/>
         <Class IRI="#BySpecies"/>
+    </SubClassOf> -->
+    <SubClassOf>
+        <Class IRI="#RobustaBean"/>
+        <Class IRI="#CoffeeBean"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SensoryAttribute"/>
@@ -527,7 +543,7 @@
             <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
         </DataHasValue>
     </SubClassOf>
-    <SubClassOf>
+    <!-- <SubClassOf>
         <Class IRI="#TurkishCoffee"/>
         <Class IRI="#TraditionalBrewed"/>
     </SubClassOf>
@@ -537,7 +553,7 @@
             <ObjectProperty IRI="#usesGrind"/>
             <Class IRI="#ExtraFineGrind"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
+    </SubClassOf> -->
     <SubClassOf>
         <Class IRI="#Water"/>
         <Class IRI="#Ingredient"/>
@@ -563,32 +579,7 @@
             <Class IRI="#http://purl.obolibrary.org/obo/BFO_0000015"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    <!-- Kardinalite: EspressoBased içeceklerde EN AZ 1 shot espresso olmalıdır (Min Cardinality = 1) -->
-    <SubClassOf>
-        <Class IRI="#EspressoBased"/>
-        <DataMinCardinality cardinality="1">
-            <DataProperty IRI="#hasEspressoShots"/>
-            <Datatype abbreviatedIRI="xsd:integer"/>
-        </DataMinCardinality>
-    </SubClassOf>
 
-    <!-- Kardinalite: Demlenmiş bir kahve (BrewCoffee) TAM OLARAK 1 öğütme tipi kullanır (Exact Cardinality = 1) -->
-    <SubClassOf>
-        <Class IRI="#BrewCoffee"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#usesGrind"/>
-            <Class IRI="#GrindSize"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-
-    <!-- Kardinalite: Bir kahve çekirdeğinin (CoffeeBean) TAM OLARAK 1 coğrafi kökeni olmalıdır -->
-    <SubClassOf>
-        <Class IRI="#CoffeeBean"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#hasOrigin"/>
-            <Class IRI="#GeographicRegion"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
     <SubClassOf>
         <Class IRI="#EspressoBased"/>
         <DataMinCardinality cardinality="1">
@@ -627,6 +618,18 @@
             <ObjectProperty IRI="#madeWith"/>
             <Class IRI="#DairyComponent"/>
         </ObjectMinCardinality>
+    </SubClassOf>
+
+    <SubClassOf>
+        <Class IRI="#DecoctionBrewedCoffee"/>
+        <Class IRI="#TraditionalBrewed"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DecoctionBrewedCoffee"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#usesGrind"/>
+            <Class IRI="#ExtraFineGrind"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     
     <DisjointClasses>
@@ -752,6 +755,18 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#http://purl.obolibrary.org/obo/FOODON_00001244</IRI>
         <Literal>CoffeeBeverage</Literal>
+    </AnnotationAssertion>
+
+    <!-- Kültürel isimlerin etiket (label) olarak eklenmesi -->
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DecoctionBrewedCoffee</IRI>
+        <Literal>Turkish Coffee</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DecoctionBrewedCoffee</IRI>
+        <Literal>Greek Coffee</Literal>
     </AnnotationAssertion>
 
     <!-- Eksik Sınıfların ve Ters Özelliklerin Deklarasyonu -->
@@ -914,10 +929,10 @@
         <Class IRI="#ExtraFineGrind"/>
         <NamedIndividual IRI="#StandartEkstraInceOgutum"/>
     </ClassAssertion>
-    <ClassAssertion>
+    <!-- <ClassAssertion>
         <Class IRI="#TurkishCoffee"/>
         <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
-    </ClassAssertion>
+    </ClassAssertion> -->
     <ClassAssertion>
         <Class IRI="#Espresso"/>
         <NamedIndividual IRI="#SabahEspressom_Ornek2"/>
@@ -993,6 +1008,11 @@
     <ClassAssertion>
         <Class IRI="#ColdServing"/>
         <NamedIndividual IRI="#BuzluServisDurumu"/>
+    </ClassAssertion>
+
+    <ClassAssertion>
+        <Class IRI="#DecoctionBrewedCoffee"/>
+        <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
     </ClassAssertion>
 
     <!-- (Property Assertions) -->
