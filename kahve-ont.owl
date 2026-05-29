@@ -954,6 +954,79 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">60.0</Literal>
     </DataPropertyAssertion>
 
+    <!-- ========================================== -->
+    <!-- MY FAVOURITE COFFEE: DOUBLESHOT ICE SHAKEN ESPRESSO -->
+    <!-- ========================================== -->
+
+    <Declaration>
+        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ShakenBuzKupleri"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ShakenIcinSut"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BuzluServisDurumu"/>
+    </Declaration>
+
+    <!-- 2. (Class Assertions) -->
+    <!-- ColdCoffee & EspressoBased  -->
+    <ClassAssertion>
+        <Class IRI="#ColdCoffee"/>
+        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EspressoBased"/>
+        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+    </ClassAssertion>
+
+    <ClassAssertion>
+        <Class IRI="#IceCubes"/>
+        <NamedIndividual IRI="#ShakenBuzKupleri"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DairyComponent"/>
+        <NamedIndividual IRI="#ShakenIcinSut"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ColdServing"/>
+        <NamedIndividual IRI="#BuzluServisDurumu"/>
+    </ClassAssertion>
+
+    <!-- (Property Assertions) -->
+
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEspressoShots"/>
+        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSugarLevel"/>
+        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Low</Literal>
+    </DataPropertyAssertion>
+
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#madeWith"/>
+        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+        <NamedIndividual IRI="#ShakenBuzKupleri"/>
+    </ObjectPropertyAssertion>
+
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#madeWith"/>
+        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+        <NamedIndividual IRI="#ShakenIcinSut"/>
+    </ObjectPropertyAssertion>
+
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#servedAs"/>
+        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+        <NamedIndividual IRI="#BuzluServisDurumu"/>
+    </ObjectPropertyAssertion>
+
 </Ontology>
 
 
