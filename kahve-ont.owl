@@ -919,6 +919,7 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">60.0</Literal>
     </DataPropertyAssertion>
 
+
     <!-- ========================================== -->
     <!-- MY FAVOURITE COFFEE: DOUBLESHOT ICE SHAKEN ESPRESSO -->
     <!-- ========================================== -->
@@ -981,6 +982,110 @@
         <NamedIndividual IRI="#MyFavoriteIceShakenEspresso"/>
         <NamedIndividual IRI="#ShakenMilkExample1"/>
     </ObjectPropertyAssertion>
+
+
+    <!-- ========================================== -->
+    <!--  STARBUCKS INDIVIDUALS -->
+    <!-- ========================================== -->
+
+    <!-- 1. Declarations (Bildirimler) -->
+    <Declaration>
+        <NamedIndividual IRI="#StarbucksGrandeCaramelMacchiato"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StarbucksVentiColdBrew"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StarbucksMochaFrappuccino"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SteamedMilkForMacchiato"/>
+    </Declaration>
+
+    <!--Labels -->
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StarbucksGrandeCaramelMacchiato</IRI>
+        <Literal xml:lang="tr">Starbucks Grande Karamel Macchiato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StarbucksVentiColdBrew</IRI>
+        <Literal xml:lang="tr">Starbucks Venti Cold Brew</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StarbucksMochaFrappuccino</IRI>
+        <Literal xml:lang="tr">Starbucks Mocha Frappuccino</Literal>
+    </AnnotationAssertion>
+
+    <!-- Class Assertions -->
+    <ClassAssertion>
+        <Class IRI="#Macchiato"/>
+        <NamedIndividual IRI="#StarbucksGrandeCaramelMacchiato"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ColdBrew"/>
+        <NamedIndividual IRI="#StarbucksVentiColdBrew"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Frappe"/>
+        <NamedIndividual IRI="#StarbucksMochaFrappuccino"/>
+    </ClassAssertion>
+    <!--  -->
+    <ClassAssertion>
+        <Class IRI="#DairyComponent"/>
+        <NamedIndividual IRI="#SteamedMilkForMacchiato"/>
+    </ClassAssertion>
+
+    <!-- 4. Property Assertions  -->
+
+    <!-- Starbucks Grande Caramel Macchiato -->
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEspressoShots"/>
+        <NamedIndividual IRI="#StarbucksGrandeCaramelMacchiato"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSugarLevel"/>
+        <NamedIndividual IRI="#StarbucksGrandeCaramelMacchiato"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">High</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMadeWith"/>
+        <NamedIndividual IRI="#StarbucksGrandeCaramelMacchiato"/>
+        <NamedIndividual IRI="#SteamedMilkForMacchiato"/>
+    </ObjectPropertyAssertion>
+
+    <!-- Starbucks Venti Cold Brew -->
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasVolume"/>
+        <NamedIndividual IRI="#StarbucksVentiColdBrew"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">700.0</Literal> <!-- Venti average ml -->
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isServedCold"/>
+        <NamedIndividual IRI="#StarbucksVentiColdBrew"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+
+    <!-- Starbucks Mocha Frappuccino -->
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isServedCold"/>
+        <NamedIndividual IRI="#StarbucksMochaFrappuccino"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSugarLevel"/>
+        <NamedIndividual IRI="#StarbucksMochaFrappuccino"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">High</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isMadeWith"/>
+        <NamedIndividual IRI="#StarbucksMochaFrappuccino"/>
+        <NamedIndividual IRI="#ShakenIceCubeExample1"/> <!-- -->
+    </ObjectPropertyAssertion>
+
 
     <DataPropertyAssertion>
         <DataProperty IRI="#isServedCold"/>
