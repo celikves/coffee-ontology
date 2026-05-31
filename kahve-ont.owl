@@ -92,7 +92,7 @@
         <Class IRI="#GrindingEquipment"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#IceCubes"/>
+        <Class IRI="#IceCube"/>
     </Declaration>
     <Declaration>
         <Class IRI="#IcedAmericano"/>
@@ -155,13 +155,13 @@
         <ObjectProperty IRI="#hasOrigin"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#madeWith"/>
+        <ObjectProperty IRI="#isMadeWith"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#preparedBy"/>
+        <ObjectProperty IRI="#isPreparedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#usesGrind"/>
+        <ObjectProperty IRI="#hasGrind"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasBrewTime"/>
@@ -170,7 +170,7 @@
         <DataProperty IRI="#hasEspressoShots"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasRoastTemp"/>
+        <DataProperty IRI="#hasRoastTemperature"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasSugarLevel"/>
@@ -188,7 +188,7 @@
         <Class IRI="#GeographicRegion"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#KolombiyaBolgesi"/>
+        <Class IRI="#ColombiaRegion"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="owl:equivalentClass"/>
@@ -200,7 +200,7 @@
     <SubClassOf>
         <Class IRI="#Americano"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#madeWith"/>
+            <ObjectProperty IRI="#isMadeWith"/>
             <Class IRI="#Water"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -318,7 +318,7 @@
     <SubClassOf>
         <Class IRI="#GreekCoffee"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#usesGrind"/>
+            <ObjectProperty IRI="#hasGrind"/>
             <Class IRI="#ExtraFineGrind"/>
         </ObjectSomeValuesFrom>
     </SubClassOf> -->
@@ -331,7 +331,7 @@
         <Class IRI="#CoffeeEquipment"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#IceCubes"/>
+        <Class IRI="#IceCube"/>
         <Class IRI="#Ingredient"/>
     </SubClassOf>
     <SubClassOf>
@@ -345,14 +345,14 @@
     <SubClassOf>
         <Class IRI="#IcedAmericano"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#madeWith"/>
-            <Class IRI="#IceCubes"/>
+            <ObjectProperty IRI="#isMadeWith"/>
+            <Class IRI="#IceCube"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#IcedAmericano"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#madeWith"/>
+            <ObjectProperty IRI="#isMadeWith"/>
             <Class IRI="#Water"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -374,8 +374,8 @@
     <SubClassOf>
         <Class IRI="#IcedLatte"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#madeWith"/>
-            <Class IRI="#IceCubes"/>
+            <ObjectProperty IRI="#isMadeWith"/>
+            <Class IRI="#IceCube"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -412,7 +412,7 @@
     <SubClassOf>
         <Class IRI="#MilkBasedEspressoBeverage"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#madeWith"/>
+            <ObjectProperty IRI="#isMadeWith"/>
             <Class IRI="#DairyComponent"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -439,7 +439,7 @@
     <SubClassOf>
         <Class IRI="#RoastingProcess"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="#hasRoastTemp"/>
+            <DataProperty IRI="#hasRoastTemperature"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -473,7 +473,7 @@
     <SubClassOf>
         <Class IRI="#TurkishCoffee"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#usesGrind"/>
+            <ObjectProperty IRI="#hasGrind"/>
             <Class IRI="#ExtraFineGrind"/>
         </ObjectSomeValuesFrom>
     </SubClassOf> -->
@@ -484,27 +484,27 @@
     <SubClassOf>
         <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#madeWith"/>
+            <ObjectProperty IRI="#isMadeWith"/>
             <Class IRI="#Ingredient"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#preparedBy"/>
+            <ObjectProperty IRI="#isPreparedBy"/>
             <Class IRI="#http://purl.obolibrary.org/obo/BFO_0000015"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#preparedBy"/>
+            <ObjectProperty IRI="#isPreparedBy"/>
             <Class IRI="#http://purl.obolibrary.org/obo/BFO_0000015"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
 
     <SubClassOf>
-        <Class IRI="#KolombiyaBolgesi"/>
+        <Class IRI="#ColombiaRegion"/>
         <Class IRI="#GeographicRegion"/>
     </SubClassOf>
 
@@ -519,7 +519,7 @@
     <SubClassOf>
         <Class IRI="#BrewCoffee"/>
         <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#usesGrind"/>
+            <ObjectProperty IRI="#hasGrind"/>
             <Class IRI="#GrindSize"/>
         </ObjectExactCardinality>
     </SubClassOf>
@@ -535,7 +535,7 @@
     <SubClassOf>
         <Class IRI="#RoastingProcess"/>
         <DataExactCardinality cardinality="1">
-            <DataProperty IRI="#hasRoastTemp"/>
+            <DataProperty IRI="#hasRoastTemperature"/>
             <Datatype abbreviatedIRI="xsd:float"/>
         </DataExactCardinality>
     </SubClassOf>
@@ -543,7 +543,7 @@
     <SubClassOf>
         <Class IRI="#MilkBasedEspressoBeverage"/>
         <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#madeWith"/>
+            <ObjectProperty IRI="#isMadeWith"/>
             <Class IRI="#DairyComponent"/>
         </ObjectMinCardinality>
     </SubClassOf>
@@ -555,7 +555,7 @@
     <SubClassOf>
         <Class IRI="#DecoctionBrewedCoffee"/>
         <ObjectHasValue>
-            <ObjectProperty IRI="#usesGrind"/>
+            <ObjectProperty IRI="#hasGrind"/>
             <NamedIndividual IRI="#ExtraFineGrind"/>
         </ObjectHasValue>
     </SubClassOf>
@@ -606,12 +606,12 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DairyComponent"/>
-        <Class IRI="#IceCubes"/>
+        <Class IRI="#IceCube"/>
         <Class IRI="#Water"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DairyComponent"/>
-        <Class IRI="#IceCubes"/>
+        <Class IRI="#IceCube"/>
         <Class IRI="#Water"/>
     </DisjointClasses>
     <SubObjectPropertyOf>
@@ -619,15 +619,15 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#madeWith"/>
+        <ObjectProperty IRI="#isMadeWith"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#preparedBy"/>
+        <ObjectProperty IRI="#isPreparedBy"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#usesGrind"/>
+        <ObjectProperty IRI="#hasGrind"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubDataPropertyOf>
@@ -639,7 +639,7 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#hasRoastTemp"/>
+        <DataProperty IRI="#hasRoastTemperature"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -686,6 +686,43 @@
         <Literal>Greek Coffee</Literal>
     </AnnotationAssertion>
 
+    <!-- İngilizce IRI'ler için Türkçe etiketler -->
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ColombiaRegion</IRI>
+        <Literal xml:lang="tr">Kolombiya Bölgesi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ColombiaRegion</IRI>
+        <Literal xml:lang="en">Colombia Region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TraditionalTurkishCoffeeExample1</IRI>
+        <Literal xml:lang="tr">Geleneksel Türk Kahvesi Örnek 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MorningEspressoExample2</IRI>
+        <Literal xml:lang="tr">Sabah Espressom Örnek 2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MyFavoriteIceShakenEspresso</IRI>
+        <Literal xml:lang="tr">Benim Favori Ice Shaken Espresso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ShakenIceCubeExample1</IRI>
+        <Literal xml:lang="tr">Shaken Buz Küpleri</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ShakenMilkExample1</IRI>
+        <Literal xml:lang="tr">Shaken İçin Süt</Literal>
+    </AnnotationAssertion>
+
     <!-- Eksik Sınıfların ve Ters Özelliklerin Deklarasyonu -->
     <Declaration>
         <ObjectProperty IRI="#isIngredientOf"/>
@@ -694,12 +731,12 @@
         <ObjectProperty IRI="#isOriginOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#prepares"/>
+        <ObjectProperty IRI="#isPreparerOf"/>
     </Declaration>
 
     <!-- Ters (Inverse) İlişki Bağlantıları -->
     <InverseObjectProperties>
-        <ObjectProperty IRI="#madeWith"/>
+        <ObjectProperty IRI="#isMadeWith"/>
         <ObjectProperty IRI="#isIngredientOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
@@ -707,18 +744,18 @@
         <ObjectProperty IRI="#isOriginOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#preparedBy"/>
-        <ObjectProperty IRI="#prepares"/>
+        <ObjectProperty IRI="#isPreparedBy"/>
+        <ObjectProperty IRI="#isPreparerOf"/>
     </InverseObjectProperties>
 
 
     <!-- Object Properties Domain ve Range Ayarları -->
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#madeWith"/>
+        <ObjectProperty IRI="#isMadeWith"/>
         <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#madeWith"/>
+        <ObjectProperty IRI="#isMadeWith"/>
         <Class IRI="#Ingredient"/>
     </ObjectPropertyRange>
 
@@ -732,20 +769,20 @@
     </ObjectPropertyRange>
 
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#usesGrind"/>
+        <ObjectProperty IRI="#hasGrind"/>
         <Class IRI="#BrewCoffee"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#usesGrind"/>
+        <ObjectProperty IRI="#hasGrind"/>
         <Class IRI="#GrindSize"/>
     </ObjectPropertyRange>
 
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#preparedBy"/>
+        <ObjectProperty IRI="#isPreparedBy"/>
         <Class IRI="#http://purl.obolibrary.org/obo/FOODON_00001244"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#preparedBy"/>
+        <ObjectProperty IRI="#isPreparedBy"/>
         <Class IRI="#PreparationProcess"/>
     </ObjectPropertyRange>
 
@@ -797,11 +834,11 @@
 
     <!-- Data Properties Domain ve Range Ayarları -->
     <DataPropertyDomain>
-        <DataProperty IRI="#hasRoastTemp"/>
+        <DataProperty IRI="#hasRoastTemperature"/>
         <Class IRI="#RoastingProcess"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="#hasRoastTemp"/>
+        <DataProperty IRI="#hasRoastTemperature"/>
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
 
@@ -825,7 +862,7 @@
         <DataProperty IRI="#hasBrewTime"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="#hasRoastTemp"/>
+        <DataProperty IRI="#hasRoastTemperature"/>
     </FunctionalDataProperty>
 
     <FunctionalDataProperty>
@@ -837,10 +874,10 @@
     <Declaration><NamedIndividual IRI="#FineGrind"/></Declaration>
     <Declaration><NamedIndividual IRI="#MediumGrind"/></Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
+        <NamedIndividual IRI="#TraditionalTurkishCoffeeExample1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SabahEspressom_Ornek2"/>
+        <NamedIndividual IRI="#MorningEspressoExample2"/>
     </Declaration>
 
     <ClassAssertion><Class IRI="#GrindSize"/><NamedIndividual IRI="#CoarseGrind"/></ClassAssertion>
@@ -849,36 +886,36 @@
     <ClassAssertion><Class IRI="#GrindSize"/><NamedIndividual IRI="#MediumGrind"/></ClassAssertion>
     <!-- <ClassAssertion>
         <Class IRI="#TurkishCoffee"/>
-        <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
+        <NamedIndividual IRI="#TraditionalTurkishCoffeeExample1"/>
     </ClassAssertion> -->
     <ClassAssertion>
         <Class IRI="#Espresso"/>
-        <NamedIndividual IRI="#SabahEspressom_Ornek2"/>
+        <NamedIndividual IRI="#MorningEspressoExample2"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#usesGrind"/>
-        <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
+        <ObjectProperty IRI="#hasGrind"/>
+        <NamedIndividual IRI="#TraditionalTurkishCoffeeExample1"/>
         <NamedIndividual IRI="#ExtraFineGrind"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasSugarLevel"/>
-        <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
+        <NamedIndividual IRI="#TraditionalTurkishCoffeeExample1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Medium</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#isFiltered"/>
-        <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
+        <NamedIndividual IRI="#TraditionalTurkishCoffeeExample1"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
     </DataPropertyAssertion>
 
     <DataPropertyAssertion>
         <DataProperty IRI="#hasEspressoShots"/>
-        <NamedIndividual IRI="#SabahEspressom_Ornek2"/>
+        <NamedIndividual IRI="#MorningEspressoExample2"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasVolume"/>
-        <NamedIndividual IRI="#SabahEspressom_Ornek2"/>
+        <NamedIndividual IRI="#MorningEspressoExample2"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">60.0</Literal>
     </DataPropertyAssertion>
 
@@ -887,67 +924,67 @@
     <!-- ========================================== -->
 
     <Declaration>
-        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+        <NamedIndividual IRI="#MyFavoriteIceShakenEspresso"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ShakenBuzKupleri"/>
+        <NamedIndividual IRI="#ShakenIceCubeExample1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ShakenIcinSut"/>
+        <NamedIndividual IRI="#ShakenMilkExample1"/>
     </Declaration>
     <!-- 2. (Class Assertions) -->
     <!-- ColdCoffee & EspressoBased  -->
     <ClassAssertion>
         <Class IRI="#ColdCoffee"/>
-        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+        <NamedIndividual IRI="#MyFavoriteIceShakenEspresso"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#EspressoBased"/>
-        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+        <NamedIndividual IRI="#MyFavoriteIceShakenEspresso"/>
     </ClassAssertion>
 
     <ClassAssertion>
-        <Class IRI="#IceCubes"/>
-        <NamedIndividual IRI="#ShakenBuzKupleri"/>
+        <Class IRI="#IceCube"/>
+        <NamedIndividual IRI="#ShakenIceCubeExample1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DairyComponent"/>
-        <NamedIndividual IRI="#ShakenIcinSut"/>
+        <NamedIndividual IRI="#ShakenMilkExample1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#DecoctionBrewedCoffee"/>
-        <NamedIndividual IRI="#GelenekselTurkKahvesi_Ornek1"/>
+        <NamedIndividual IRI="#TraditionalTurkishCoffeeExample1"/>
     </ClassAssertion>
 
     <!-- (Property Assertions) -->
 
     <DataPropertyAssertion>
         <DataProperty IRI="#hasEspressoShots"/>
-        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+        <NamedIndividual IRI="#MyFavoriteIceShakenEspresso"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
     </DataPropertyAssertion>
 
     <DataPropertyAssertion>
         <DataProperty IRI="#hasSugarLevel"/>
-        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+        <NamedIndividual IRI="#MyFavoriteIceShakenEspresso"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Low</Literal>
     </DataPropertyAssertion>
 
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#madeWith"/>
-        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
-        <NamedIndividual IRI="#ShakenBuzKupleri"/>
+        <ObjectProperty IRI="#isMadeWith"/>
+        <NamedIndividual IRI="#MyFavoriteIceShakenEspresso"/>
+        <NamedIndividual IRI="#ShakenIceCubeExample1"/>
     </ObjectPropertyAssertion>
 
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#madeWith"/>
-        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
-        <NamedIndividual IRI="#ShakenIcinSut"/>
+        <ObjectProperty IRI="#isMadeWith"/>
+        <NamedIndividual IRI="#MyFavoriteIceShakenEspresso"/>
+        <NamedIndividual IRI="#ShakenMilkExample1"/>
     </ObjectPropertyAssertion>
 
     <DataPropertyAssertion>
         <DataProperty IRI="#isServedCold"/>
-        <NamedIndividual IRI="#BenimFavoriIceShaken"/>
+        <NamedIndividual IRI="#MyFavoriteIceShakenEspresso"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </DataPropertyAssertion>
 
