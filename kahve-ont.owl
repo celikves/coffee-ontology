@@ -76,6 +76,18 @@
         <Class IRI="#FlavourProfile"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#RoastProfile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LightRoast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MediumRoast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DarkRoast"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Frappe"/>
     </Declaration>
     <!-- <Declaration>
@@ -102,6 +114,27 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Ingredient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MilkOrDairyComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnimalMilk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantBasedMilk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OatMilk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AlmondMilk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoyMilk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoconutMilk"/>
     </Declaration>
     <Declaration>
         <Class IRI="#LibericaBean"/>
@@ -162,6 +195,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasGrind"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRoastProfile"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasBrewTime"/>
@@ -264,7 +300,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DairyComponent"/>
-        <Class IRI="#Ingredient"/>
+        <Class IRI="#AnimalMilk"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Espresso"/>
@@ -306,6 +342,22 @@
     <SubClassOf>
         <Class IRI="#FlavourProfile"/>
         <Class IRI="#CoffeeCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RoastProfile"/>
+        <Class IRI="#CoffeeCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LightRoast"/>
+        <Class IRI="#RoastProfile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MediumRoast"/>
+        <Class IRI="#RoastProfile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DarkRoast"/>
+        <Class IRI="#RoastProfile"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Frappe"/>
@@ -381,6 +433,34 @@
     <SubClassOf>
         <Class IRI="#Ingredient"/>
         <Class IRI="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilkOrDairyComponent"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnimalMilk"/>
+        <Class IRI="#MilkOrDairyComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantBasedMilk"/>
+        <Class IRI="#MilkOrDairyComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AlmondMilk"/>
+        <Class IRI="#PlantBasedMilk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoconutMilk"/>
+        <Class IRI="#PlantBasedMilk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OatMilk"/>
+        <Class IRI="#PlantBasedMilk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoyMilk"/>
+        <Class IRI="#PlantBasedMilk"/>
     </SubClassOf>
     <!-- <SubClassOf>
         <Class IRI="#LibericaBean"/>
@@ -585,6 +665,10 @@
         <Class IRI="#RoastedCoffee"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#AnimalMilk"/>
+        <Class IRI="#PlantBasedMilk"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#CoffeeExtract"/>
         <Class IRI="#DairyComponent"/>
         <Class IRI="#Water"/>
@@ -600,17 +684,22 @@
         <Class IRI="#SensoryAttribute"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#DarkRoast"/>
+        <Class IRI="#LightRoast"/>
+        <Class IRI="#MediumRoast"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#PreRoastingProcess"/>
         <Class IRI="#PreparationProcess"/>
         <Class IRI="#RoastingProcess"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#DairyComponent"/>
+        <Class IRI="#MilkOrDairyComponent"/>
         <Class IRI="#IceCube"/>
         <Class IRI="#Water"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#DairyComponent"/>
+        <Class IRI="#MilkOrDairyComponent"/>
         <Class IRI="#IceCube"/>
         <Class IRI="#Water"/>
     </DisjointClasses>
@@ -628,6 +717,10 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasGrind"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRoastProfile"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubDataPropertyOf>
@@ -722,6 +815,51 @@
         <IRI>#ShakenMilkExample1</IRI>
         <Literal xml:lang="tr">Shaken İçin Süt</Literal>
     </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MilkOrDairyComponent</IRI>
+        <Literal xml:lang="tr">Süt veya Süt Alternatifi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AnimalMilk</IRI>
+        <Literal xml:lang="tr">Hayvansal Süt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PlantBasedMilk</IRI>
+        <Literal xml:lang="tr">Bitkisel Süt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OatMilk</IRI>
+        <Literal xml:lang="tr">Yulaf Sütü</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AlmondMilk</IRI>
+        <Literal xml:lang="tr">Badem Sütü</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RoastProfile</IRI>
+        <Literal xml:lang="tr">Kavurma Derecesi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LightRoast</IRI>
+        <Literal xml:lang="tr">Açık Kavurma (Cinnamon, New England)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MediumRoast</IRI>
+        <Literal xml:lang="tr">Orta Kavurma (City, High)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DarkRoast</IRI>
+        <Literal xml:lang="tr">Koyu Kavurma (French, Italian)</Literal>
+    </AnnotationAssertion>
 
     <!-- Eksik Sınıfların ve Ters Özelliklerin Deklarasyonu -->
     <Declaration>
@@ -775,6 +913,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasGrind"/>
         <Class IRI="#GrindSize"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRoastProfile"/>
+        <Class IRI="#RoastedCoffee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRoastProfile"/>
+        <Class IRI="#RoastProfile"/>
     </ObjectPropertyRange>
 
     <ObjectPropertyDomain>
